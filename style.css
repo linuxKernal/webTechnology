@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 header{
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
     padding:.3rem;
     display: grid;
     grid-template-columns: 1fr 3fr;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 .logoDiv img{
     width:250px;
@@ -63,7 +69,7 @@ header > ul > li > span:hover{
     position: absolute;
     top:2.44rem;
     z-index: 5;
-    width:8rem;
+    width:10rem;
     color: rgb(32, 32, 32);
     padding: .3rem;
     border-top: 3px solid green;
@@ -84,14 +90,14 @@ li:hover  ul{
 }
 
 .sublist li:hover{
-    background-color: rgba(128, 128, 128, 0.151);
+    background-color: whitesmoke;
 }
 
 
 
 .container{
     position: relative;
-    height:50vh;
+    height:60vh;
 }
 .container img{
     width:100%;
@@ -100,25 +106,57 @@ li:hover  ul{
 
 .imageText{
     position: absolute;
-    top:6rem;
+    top:7rem;
     width:25rem;
-    /* background-color: gray; */
-    color: white;
+    color: rgb(31, 145, 21);
     left:5rem;
+    border-radius: .5rem;
     padding: .5rem;
+    background-color: rgba(241, 241, 241, 0.726);
 }
 
 .imageText > h2{
-    font-size: 4rem;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
 }
 .imageText > p{
     font-size: 1.2rem;
+    text-align: justify;
 }
 
-.content{
+.newsDiv{
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    padding: .5rem;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+
+.newsDiv h4{
+    font-weight: 200;
+    color: rgb(53, 53, 53);
+    transform: translateX(100%);
+    animation: moveText 30s linear infinite;
+    width: 150%;
+}
+
+@keyframes moveText{
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+/* .content{
     padding: 1rem 3rem;
     display: flex;
-    /* height:; */
 }
 
 .contentImage img{
@@ -132,4 +170,51 @@ li:hover  ul{
     padding-left: 1rem;
     padding-top: 1rem;
     font-size: 1.3rem;
+} */
+
+.listClubs{
+    /* background-color: rgb(218, 250, 218); */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: .3rem;
+    gap:1rem;
+    margin-top: 1rem;
+}
+
+.clubDiv{
+    width:24vw;
+    height:30vh;
+    position: relative;
+    /* border: 2px solid rgb(161, 161, 161); */
+    border-radius: .4rem;
+    transition-duration: 500ms;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.clubText{
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    /* text-transform: uppercase; */
+    position: absolute;
+    bottom:1rem;
+    font-weight: 500;
+    left: 1rem;
+    /* width: 100%; */
+    background-color:rgba(255, 255, 255, 0.795);
+    padding: .3rem;
+    border-radius: .3rem;
+    transition-duration: 300ms;
+}
+
+
+.clubDiv:hover { 
+    /* opacity: 0; */
+    transform: scale(1.05);
+}
+
+
+.clubDiv > img{
+    width:100%;
+    height:100%;
+    border-radius: .3rem;
 }
