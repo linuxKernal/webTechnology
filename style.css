@@ -154,23 +154,90 @@ li:hover  ul{
 
 
 
-/* .content{
-    padding: 1rem 3rem;
+.contentMain{
+    /* background-color: rgb(196, 255, 156); */
+    padding: .3rem;
+    margin: 0 auto;
+    /* width:98%; */
+}
+.contenText > h2{
+    color: rgb(43, 136, 0);
+    /* color: white; */
+    font-size: 2rem;
+    /* border-radius: .3rem; */
+    border-left: .3rem solid green;
+    padding-left: .5rem;
+    margin-bottom: .3rem;
+    /* background-color: rgb(113, 255, 113); */
+}
+
+.content{
+    padding: .3rem 3rem;
     display: flex;
+    align-items: center;
+    margin-top: .5rem;
+    position: relative;
 }
 
 .contentImage img{
-    width:30rem;
-    transition-duration: 1.5s;
-    padding-top: 1rem;
+    width:50vw;
+    height:60vh;
 }
 .contenText{
-    text-indent: 3rem;
-    color: black;
-    padding-left: 1rem;
-    padding-top: 1rem;
+    color: rgb(63, 63, 63);
+    padding: .3rem;
     font-size: 1.3rem;
-} */
+    position: absolute;
+    width: 47.5vw;
+    background-color: white;
+    left: 40rem;
+    border-radius: .3rem;
+    /* border: 3px solid rgb(0, 136, 18); */
+}
+.contenText > h2 >hr{
+    width:5rem;
+    height: .3rem;
+    background-color: green;
+    border:  none;
+}
+.clubActive{
+    /* background-color: lime; */
+    margin-top:1rem;
+}
+
+.clubActive > h2{
+    font-size: 2rem;
+    font-weight:bolder;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.ActiveDiv{
+    display: flex;
+    gap: .3rem;
+    justify-content: space-evenly;
+}
+
+.activeContent{
+    /* background-color: rgb(95, 209, 247); */
+    width: 453px;
+}
+
+.fluid{
+    width: 100% ;
+    height: 18rem;
+    overflow: hidden;
+}
+
+.fluid > img{
+    width: 100%;
+    height: 18rem;
+    transition-duration: 600ms;
+}
+
+.fluid > img:hover{
+    transform: scale(1.1);
+}
 
 .listClubs{
     /* background-color: rgb(218, 250, 218); */
