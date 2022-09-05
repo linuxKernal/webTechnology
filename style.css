@@ -7,13 +7,24 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background: url("images/Auditorium.jpg");
+    background-attachment: fixed;
+    background-size: 100vw 70vh;
+    background-repeat: no-repeat;
+    padding-bottom: 3rem;
+    /* overflow-x: hidden; */
+}
+
+
 header{
     background-color: rgb(255, 255, 255);
     padding:.3rem;
     display: grid;
     grid-template-columns: 1fr 3fr;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 10;
 }
@@ -106,14 +117,13 @@ li:hover  ul{
 }
 
 .imageText{
-    position: absolute;
-    top:7rem;
     width:25rem;
     color: rgb(31, 145, 21);
-    left:5%;
     border-radius: .5rem;
     padding: .5rem;
     background-color: rgba(241, 241, 241, 0.726);
+    margin-top: 2rem;
+    margin-left: 4rem;
 }
 
 .imageText > h2{
@@ -127,13 +137,12 @@ li:hover  ul{
 }
 
 .newsDiv{
-    position: absolute;
-    bottom: 0;
     width:100%;
     background-color: rgb(255, 255, 255);
     padding: .5rem;
     font-size: 1.2rem;
     overflow-x: hidden;
+    margin-top: 3rem;
 }
 
 .newsDiv h4{
@@ -157,42 +166,41 @@ li:hover  ul{
 
 
 .contentMain{
-    /* background-color: rgb(196, 255, 156); */
     padding: .3rem;
     margin: 0 auto;
-    /* width:98%; */
+    background-color: rgb(255, 255, 255);
+    width:100%;
 }
 .contenText > h2{
     color: rgb(43, 136, 0);
-    /* color: white; */
     font-size: 2rem;
-    /* border-radius: .3rem; */
     border-left: .3rem solid green;
     padding-left: .5rem;
     margin-bottom: .3rem;
-    /* background-color: rgb(113, 255, 113); */
 }
 
 .content{
-    padding: .3rem 3rem;
+    padding: .3rem 0;
     display: flex;
     align-items: center;
-    margin-top: .5rem;
     position: relative;
 }
-
+.contentImage{
+    width: 100%;
+    height:40vw;
+}
 .contentImage img{
-    width:50vw;
-    height:60vh;
+    width:100%;
+    height:100%;
 }
 .contenText{
     color: rgb(63, 63, 63);
     padding: .3rem;
     font-size: 1.3rem;
     position: absolute;
-    width: 47.5vw;
+    width: 50%;
     background-color: white;
-    left: 40%;
+    right: 5%;
     border-radius: .3rem;
     /* border: 3px solid rgb(0, 136, 18); */
 }
@@ -204,7 +212,8 @@ li:hover  ul{
 }
 .clubActive{
     /* background-color: lime; */
-    margin-top:1rem;
+    background-color: rgb(255, 255, 255);
+
 }
 
 .clubActive > h2{
@@ -242,15 +251,26 @@ li:hover  ul{
 }
 
 .listClubs{
-    /* background-color: rgb(218, 250, 218); */
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: .3rem;
     gap:1rem;
-    margin-top: 1rem;
 }
-
+.styleDiv{
+    width: 100%;
+    height:40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.styleDiv h2{
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    /* text-transform: uppercase; */
+    /* text-shadow: 1px 1px rgb(189, 189, 189); */
+}
 .clubDiv{
     width:24vw;
     height:30vh;
@@ -286,4 +306,224 @@ li:hover  ul{
     width:100%;
     height:100%;
     border-radius: .3rem;
+}
+
+.csiClub{
+    padding-top: 3rem;
+    background-color: white;
+}
+.topContent{
+    position: relative;
+}
+
+.topContent img{
+    width: 100%;
+    height: 60vh;
+}
+
+.topContentText{
+    position: absolute;
+    width: 40%;
+    right: 10%;
+    top:25%;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+}
+
+.topContentText h2{
+    color: green;
+    font-size:2rem;
+}
+
+.csiClubActive{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: -5rem;
+}
+.csiClubList{
+    width:25vw;
+    background-color: white;
+    border-bottom: 3px solid rgb(2, 158, 2);
+    padding: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.csiClubList > h2{
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.superClub{
+    background-color: white;
+    padding-bottom: 2rem;
+}
+.superHeader{
+    display: grid;
+    grid-template-columns: 50vw 1fr;
+}
+
+
+.superHeader div:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+}
+
+.superHeader div:nth-child(2) {
+    background-color: rgb(255, 255, 255);  
+    color: rgb(27, 27, 27);
+    padding: 3rem;
+    /* background: linear-gradient(to top left, #28b487, #7dd56f); */
+}
+.superHeader div:nth-child(2)  h2{
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.superHeader div:nth-child(2)  h2::before{
+    content: url("https://cdnbbsr.s3waas.gov.in/s307811dc6c422334ce36a09ff5cd6fe71/uploads/2020/01/2020010996.png");
+
+}
+
+.superHeader div:nth-child(2)  p{
+    font-size: 1.1rem;
+}
+
+.superClubList{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.superClubDiv{
+    width:26rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.superClubDiv > img{
+    width:100%;
+    height: 15rem;
+}
+
+.superClubText{
+    padding: 1rem;
+}
+
+.superClubText h2{
+    margin-bottom: .5rem;
+}
+
+.clubListTitle{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.newClub{
+    background-color: white;
+    padding-top:3rem;
+    position: relative;
+}
+
+.newClubHeader{
+    width: 100%;
+    position: relative;
+}
+
+.newClubHeader > img{
+    width: 100%;
+    height: 65vh;
+}
+
+.newHeaderDiv{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba(255, 255, 255, 0.315);
+    padding: .3rem;
+    border-radius: .5rem;
+}
+
+.newHeaderDiv::before{
+    content: "";
+    background-image: url("./images/logo192.png");
+    width: 4rem;
+    height: 4rem;
+    background-size: 4rem 4rem;
+    margin-right: .5rem;
+}
+
+.newHeaderDiv h2{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.newClubContent{
+    background-color: rgba(255, 255, 255, 0.753);
+    width:22rem;
+    position: absolute;
+    top:15rem;
+    right:10%;
+    color: black;
+    padding: 1rem;
+    border-top: 3px solid orange;
+}
+
+.newClubContent h2{
+    padding-bottom: .5rem;
+}
+
+.newClubActive{
+    /* background-color: salmon; */
+}
+.newClubActive > div{
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    padding: 1rem;
+    border-left:3px solid green;
+    margin: 1rem auto;
+    width:98%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.newTitle{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.newClubDiv1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.newClubDiv2{
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+}
+
+.newClubDiv2 > button{
+    font-size: 1.03rem;
+    padding: .2rem .5rem;
+    border: none;
+    outline: none;
+    margin-top: 2rem;
+    border-radius: .3rem;
+    background-color: transparent;
+    color: orange;
+    position: relative;
+}
+
+.newClubDiv2 > button::after{
+    content: ">";
+    font-size: 1.3rem;
+    position: absolute;
+    right:-4px;
+    top: 5%;
 }

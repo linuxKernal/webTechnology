@@ -77,9 +77,9 @@
                 <label for="">accept terms and<br> conditions</label>
                 <span>
                     <input type="checkbox" id="terms1" name="terms" value="yes">
-                    <label for="vehicle1"> I have a bike</label><br>
+                    <label for="terms1"> Terms of Service</label><br>
                     <input type="checkbox" id="terms2" name="terms" value="yes">
-                    <label for="vehicle2"> I have a car</label><br>
+                    <label for="terms2"> Privacy Policy</label><br>
                 </span>
             </div>
         </div>
@@ -102,8 +102,7 @@ const validation = ()=>{
     const year = document.getElementsByName("stdYear")[0]
     const department = document.getElementsByName("department")[0]
     const clubName = document.getElementsByName("clubName")[0]
-
-    
+    const brithDay = document.getElementById("brithDay")
     
     if(name.value.trim === ""){
         log("Please enter your name")
@@ -132,6 +131,10 @@ const validation = ()=>{
     } 
     if ( clubName.options[clubName.selectedIndex].value ==="null"){  
         log("Select the club your want to join")
+        return
+    }
+    if(brithDay.value === ""){
+        log("Select Your Date of Brith")
         return
     }
     if(email.value.trim === "") {
