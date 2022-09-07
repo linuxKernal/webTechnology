@@ -27,6 +27,7 @@
             </ul>
             </li>
             <li>
+                <span class="joinButn"><a href="./memberShip.html">Register</a></span>
                 <span><a href="./loginPage.html" style="text-decoration: none;color: white;">Login</a></span>
             </li>
         </ul>
@@ -48,37 +49,40 @@
         </div>
     </div>
     <div class="listClubs">
-        <div class="clubDiv">
+        <div class="clubDiv" onclick="toggle(1)">
+            <img src="./images/nature4.jpg" alt="">
+            <div class="clubText">
+                ECO club
+            </div>
+        </div>
+        <div class="clubDiv" onclick="toggle(2)">
+            <img src="./images/nature2.jpg" alt="">
+            <div class="clubText">
+                CSI club
+            </div>
+        </div>
+        <div class="clubDiv" onclick="toggle(3)">
+            <img src="./images/nature3.jpg" alt="">
+            <div class="clubText">
+                NCC club
+            </div>
+        </div>
+        <div class="clubDiv" onclick="toggle(4)">
+            <img src="./images/nature5.jpg" alt="">
+            <div class="clubText">
+                SCIENCE club
+            </div>
+        </div>
+        <div class="clubDiv" onclick="toggle(5)">
                 <img src="./images/nature1.jpg" alt="">
                 <div class="clubText">
                     NSS club
                 </div>
         </div>
-        <div class="clubDiv">
-                <img src="./images/nature2.jpg" alt="">
-                <div class="clubText">
-                    CSI club
-                </div>
-        </div>
-        <div class="clubDiv">
-                <img src="./images/nature3.jpg" alt="">
-                <div class="clubText">
-                    NCC club
-                </div>
-        </div>
-        <div class="clubDiv">
-                <img src="./images/nature4.jpg" alt="">
-                <div class="clubText">
-                    ECO club
-                </div>
-        </div>
-        <div class="clubDiv">
-                <img src="./images/nature5.jpg" alt="">
-                <div class="clubText">
-                    SCIENCE club
-                </div>
-        </div>
-        <div class="clubDiv">
+       
+        
+        
+        <div class="clubDiv" onclick="toggle(6)">
                 <img src="./images/nature6.jpg" alt="">
                 <div class="clubText">
                     FINE ARTS club
@@ -90,7 +94,7 @@
             National Engineering College
         </h2>
     </div>
-    <div class="contentMain">
+    <div class="contentMain" id="1">
         <div class="content">
         <div class="contentImage">
             <img src="./images/treesmall.jpg" alt="plant tree">
@@ -145,7 +149,7 @@
             </div>
         </div>
     </div>
-    <div class="csiClub">
+    <div class="csiClub" id="2">
             <div class="topContent">
                 <img src="./images/nature4orignal.jpg" alt="">
                 <div class="topContentText">
@@ -188,7 +192,7 @@
                 </div>
             </div>
     </div>
-    <div class="superClub">
+    <div class="superClub" id="3">
             <div class="superHeader">
                 <div>
                     <img src="https://www.telegraph.co.uk/content/dam/news/2022/05/11/TELEMMGLPICT000153454699_trans_NvBQzQNjv4Bq5oI2RUtWbBHSsDfhI3EIqTsoP6K2mMXO8tELEPpzIJQ.jpeg" alt="">
@@ -249,7 +253,7 @@
             </div>
         </div>
     </div>
-    <div class="newClub">
+    <div class="newClub" id="4">
         <div class="newClubHeader">
             <img src="./images/nature7.jpg" alt="">
             <div class="newHeaderDiv">
@@ -324,5 +328,85 @@
             </div>
         </div>  
     </div>
+    <div class="nssClub" id="5">
+        <div class="nssHome">
+            <img src="./images/nature3.jpg" alt="">
+            <h2 class="nssTitle">
+                National Service Scheme
+            </h2>
+            <div class="nssWapper">
+            <div class="nssImageText">
+                <h2>About NSS</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Ipsa dicta, laborum sit, ea qui quo corrupti eaque, 
+                    incidunt repudiandae 
+                </p>
+            </div>
+            <div class="nssImageText">
+                <h2>Major Activities</h2>
+                <p>
+                    In India, the idea of involving students in the task of national service 
+                    dates back to the times of Mahatma Gandhi, 
+                    the father of the nation
+                </p>
+            </div>
+            <div class="nssImageText">
+                <h2>National Youth Festivals</h2>
+                <p>
+                    A NSS volunteer who takes part in the community service 
+                    programme would either be a college level 
+                    or a senior secondary level student
+                </p>
+            </div>
+        </div>
+        </div>
+        <div class="superClubList">
+            <div class="superClubDiv">
+                <img src="./images/nature2.jpg" alt="">
+                <div class="superClubText">
+                    <h2>
+                        AIM OF NCC
+                    </h2>
+                    <p>
+                        To Create a Human Resource of Organized, Trained and Motivated Youth,
+                         To Provide Leadership in all Walks of life and be Always Available for the Service of the Nation.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="superClubDiv">
+                <img src="./images/nature3.jpg" alt="">
+                <div class="superClubText">
+                    <h2>
+                       NSS Armed Force
+                    </h2>
+                    <p>
+                        A military, also known collectively as armed forces, is a heavily armed, 
+                        highly organized force primarily intended for warfare. 
+                        It is typically authorized and maintained by a sovereign state, 
+                        with its members identifiable by their distinct military uniform
+                    </p>
+                </div>
+                
+            </div>
+            <div class="superClubDiv">
+                <img src="./images/nature6.jpg" alt="">
+                <div class="superClubText">
+                    <h2>
+                        NSS Force
+                    </h2>
+                    <p>
+                        The Army profession is a unique vocation of experts who are entrusted to defend the Constitution and 
+                        the rights and interests of the American people
+                    </p>
+                </div>
+                
+            </div>
+        </div>  
+    </div>
+<script>
+    const toggle = (id)=> window.location.href = `#${id}`
+</script>
 </body>
 </html>

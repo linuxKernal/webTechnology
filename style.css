@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
 *{
     padding: 0;
     margin: 0;
@@ -55,7 +58,7 @@ header > ul > li:hover  hr{
     border: 2px solid rgb(124, 124, 124);
 }
 
-header > ul > li > span{
+header > ul > li > span:nth-of-type(2){
     color: white;
     background-color: rgb(6, 185, 6);
     font-size: 1.2rem;
@@ -64,7 +67,7 @@ header > ul > li > span{
     border: 2px solid white;
 }
 
-header > ul > li > span:hover{
+header > ul > li > span:nth-of-type(2):hover{
     border: 2px solid transparent;
 }
 
@@ -104,6 +107,15 @@ li:hover  ul{
     background-color: whitesmoke;
 }
 
+.joinButn{
+    background-color: transparent;
+    margin-right: 1rem;
+}
+
+.joinButn a{
+    text-decoration: none;
+    color: seagreen;
+}
 
 
 .container{
@@ -478,15 +490,14 @@ li:hover  ul{
     padding-bottom: .5rem;
 }
 
-.newClubActive{
-    /* background-color: salmon; */
-}
 .newClubActive > div{
     display: grid;
     grid-template-columns: 20rem 1fr;
     padding: 1rem;
     border-left:3px solid green;
-    margin: 1rem auto;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     width:98%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -526,4 +537,51 @@ li:hover  ul{
     position: absolute;
     right:-4px;
     top: 5%;
+}
+
+.nssClub{
+    background-color: white;
+    padding-top: 3rem;
+}
+.nssHome{
+    position: relative;
+}
+.nssHome > img{
+    width: 100%;
+    height: 60vh;
+}
+
+.nssImageText{
+    /* background-color: rgb(0, 186, 219); */
+    background: linear-gradient(to top left, #28b487, #7dd56f);
+    width:25rem;
+    padding: .5rem;
+    color: rgb(255, 255, 255);
+    border-radius: .5rem;
+}
+
+.nssImageText h2{
+    /* background-color: rgb(185, 185, 185); */
+    /* color: rgb(34, 34, 34); */
+    /* text-align: center; */
+    margin-bottom: .3rem;
+    /* text-decoration: underline; */
+}
+
+.nssTitle{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: white;
+    background-color: rgba(236, 236, 236, 0.568);
+    padding: 0 3rem;
+    /* border-radius: .3rem; */
+
+}
+.nssWapper{
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
 }
