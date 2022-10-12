@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+    <title>User page</title>
+</head>
+<body>
+    <header>
+        <div class="logoDiv">
+            <img src="https://nec.edu.in/wp-content/themes/vajra/assets/images/logo_2.svg" alt="nec logo">
+        </div>
+        <div class="navText">
+            <div class="list">
+                <div class="navProfile">
+                    <div class="profileName">
+                        <h2>Peter England</h2>
+                        <div>
+                            <ul>
+                                <li>Setting</li>
+                                <li>Profile</li>
+                                <li>Logout</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="profileImage">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="eventColor">
+        <div class="eventIndex">
+            <h2>Club Events</h2>
+            <button onclick="toggleAlert()"><img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" alt="">Create</button>
+        </div>
+        <div class="superClubList events">
+            <div class="superClubDiv enentsDiv">
+            <img src="./images/nature2.jpg" alt="">
+            <div class="eventTime">12/05/2022 - 10.30 AM</div>
+            <div class="superClubText">
+                <h2>ECO Club</h2>
+                <p>To Create a Human Resource</p>
+                <div class="eventMeta">
+                    <span class="spanCount">Registered : <span>13</span> </span>
+                    <span class="viewButn"> <button>View</button> </span>
+                    <span class="spanButn"> <button>Trash</button> </span>
+                </div>
+            </div>
+            
+            </div>
+        <div class="superClubDiv enentsDiv">
+            <img src="./images/nature3.jpg" alt="">
+            <div class="eventTime">06/05/2022 - 10.30 AM</div>
+            <div class="superClubText">
+                <h2>NSS Club</h2>
+                <p>A military, also known collectively</p>
+                <div class="eventMeta">
+                    <span >Registered : 5 </span>
+                    <span class="viewButn"> <button>View</button> </span>
+                    <span class="spanButn"> <button>Trash</button> </span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="superClubDiv enentsDiv">
+            <img src="./images/nature6.jpg" alt="">
+            <div class="eventTime">25/05/2022 - 10.30 AM</div>
+            <div class="superClubText">
+                <h2>NCC Club</h2>
+                <p>The Army profession is a unique</p>
+                <div class="eventMeta">
+                    <span >Registered : 24 </span>
+                    <span class="viewButn"> <button>View</button> </span>
+                    <span class="spanButn"> <button>Trash</button> </span>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+
+<div class="alertMaster" style="display: none;" >
+    <div class="master" >
+        <h2 class="title"> Event Registration form</h2>
+            <div class="studentForm">
+                <div class="dataInput">
+                    <label for="eventname">Event name</label>
+                    <input type="text" id="eventname" required>
+                </div>
+                <div class="dataInput">
+                    <label for="clubname">club name</label>
+                    <select name="clubName" id="clubname" required>
+                        <option value="null" disabled selected>select club</option>
+                        <option value="NSS club">NSS club</option>
+                        <option value="CSI club" >CSI club</option>
+                        <option value="NCC club">NCC club</option>
+                        <option value="ECO club">ECO club</option>
+                        <option value="SCIENCE club">SCIENCE club</option>
+                    </select>
+                </div>
+                <div class="dataInput">
+                    <label for="clubname">Date time</label>
+                    <input type="datetime-local" name="" id="">
+                </div>
+                <div class="dataInput">
+                    <label for="eventimage">event image</label>
+                    <input type="file" id="eventimage">
+                </div>
+                <div class="butnDiv">
+                    <input id="doneButn" onclick="toggleAlert()" type="submit" value="Submit" >
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="eventData">
+    <h2>NCC Club</h2>
+    <p>The Army profession is a unique vocation</p>
+    <div class="eventContent">
+    </div>
+</div> -->
+<script>
+    const alertBox = document.getElementsByClassName("alertMaster")[0];
+    const master = document.getElementsByClassName("master")[0]
+    function toggleAlert(){
+        if(alertBox.style.display === "none"){
+            alertBox.style.display = "flex";
+        }
+        else alertBox.style.display = "none";
+    }
+</script>
+</body>
+</html>
