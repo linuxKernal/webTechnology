@@ -68,6 +68,25 @@ function showUser(){
         butn2.append("Trash")
         butn2.classList.add("userButn")
         butn2.classList.add("trashButn")
+        butn2.addEventListener("click",()=>{
+            const text = userData[i]["uid"];
+            const urlencode = `action=trash&uid=${text}`
+
+            fetch("http://localhost:8080/newclub/newuser",{
+                method:"POST",
+                headers:{
+                    'content-type': 'application/x-www-form-urlencoded',
+                },
+                body: encodeURI(urlencode)
+            })
+            .then((res)=>{
+                return res.text()
+            })
+            .then(text=>{
+                console.log(text)
+                getCredentials()
+            })
+        })
         td2.append(butn2)
         tr.append(td1)
         tr.append(td2)
@@ -77,31 +96,30 @@ function showUser(){
     }
 }
 
+
 const form = document.getElementById("userform")
 form.addEventListener("submit",(e)=>{
     e.preventDefault()
-    console.log(e.target.username);
-    const formData = new FormData();
-    formData.append("username",e.target.username.value)
-    formData.append("password",e.target.password.value)
-    formData.append("action",e.target.action.value)
-    formData.append("uid",e.target.uid.value)
-    console.log(e.target.username.value,e.target.password.value,e.target.action.value,e.target.uid.value);
-    fetch("http://localhost:8080/newclub/newuser",{ // http://localhost:8080/newclub/newuser
+    const username = e.target.username.value
+    const password = e.target.password.value
+    const email = e.target.email.value
+    const action = e.target.action.value
+    const uid = e.target.uid.value
+    const urlencode = `username=${username}&password=${password}&email=${email}&action=${action}&uid=${uid}`
+
+    fetch("http://localhost:8080/newclub/newuser",{
         method:"POST",
         headers:{
-            // 'Content-Type': 'application/json',
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-            // 'Content-Type': 'text/plain'
+            'content-type': 'application/x-www-form-urlencoded',
         },
-        body:formData
+        body: encodeURI(urlencode)
     })
     .then((res)=>{
-        getCredentials()
         return res.text()
     })
     .then(text=>{
-        console.log(text);
+        console.log(text)
+        getCredentials()
     })
 })
 
@@ -116,6 +134,6 @@ document.getElementById("createNew").addEventListener('click',()=>{
 
 function alertEsc(evt) {
     if (evt.code === 'Escape') {
-     toggleAlert()
+        if (alertBox.style.display = "flex") toggleAlert()
     }
 }

@@ -103,6 +103,16 @@ li:hover  ul{
     text-align: center;
 }
 
+.sublist li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sublist li a:active{
+    color:orange;
+}
+
+
 .sublist li:hover{
     background-color: whitesmoke;
 }
@@ -142,10 +152,12 @@ li:hover  ul{
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
+    color: rgb(0, 131, 70);
 }
 .imageText > p{
     font-size: 1.2rem;
     text-align: justify;
+    color: rgb(0, 170, 91);
 }
 
 .newsDiv{
@@ -585,3 +597,82 @@ li:hover  ul{
     bottom: 5%;
     left: 10%;
 }
+.homeEvents{
+    background-color: white;
+    margin-top: 3rem;
+    padding-bottom: 5rem;
+}
+.eventColor > h2{
+    padding: .2rem;
+    color: green;
+    margin-left: 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.87);
+    width: 24rem;
+    /* border-radius: .3rem; */
+    font-size: 2rem;
+    /* border-left: 4px solid green; */
+
+}
+
+.eventColor > h2::before{
+    content: "#";
+}
+
+.clubMainTitle{
+    background-color: white;
+    color:#63df50;
+    padding-bottom: 2.5rem;
+    font-size: 2rem;
+    padding-left: 3rem;
+}
+
+.clubMainTitle::before{
+    content: "# ";
+}
+
+.events{
+    margin-top: 0;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.eventColor{
+    /* background: linear-gradient(to top left, #28b488, #7dd56f); */
+    /* background-color: rgb(245, 159, 84); */
+    padding-top: 1rem;
+}
+.enentsDiv{
+    background-color: white;
+    border-radius: .5rem;
+    width:24rem;
+    position: relative;
+    transition-duration: 500ms;
+}
+
+.enentsDiv:hover{
+    transform: translateY(-12px);
+}
+
+.enentsDiv img{
+    border-radius: .5rem .5rem 0 0;
+    height:14rem;
+}
+.enentsDiv h2{
+    font-size: 1.1rem;
+}
+.eventLink{
+   color: green;
+}
+
+.eventTime{
+    position: absolute;
+    top:4%;
+    left: 3%;
+    background-color: rgba(255, 255, 255, 0.678);
+    color: rgb(56, 56, 56);
+    padding: .3rem;
+    border-radius: .3rem;
+}
+
+/* https://cdn-icons-png.flaticon.com/512/659/659999.png */
